@@ -104,9 +104,9 @@ def convert_yolo_to_coco(dataset_dir, class_names):
     with open(os.path.join(dataset_dir, 'annotations', 'instances_val.json'), 'w') as f:
         json.dump(coco_val, f, indent=4)
 
-class_names = ['car', 'bike', 'auto', 'rickshaw', 'cycle', 'bus', 'minitruck', 'truck', 'van', 'taxi', 'motorvan', 'toto', 'train', 'boat', 'cycle van']  # Replace with your actual class names
+class_names = []  # Replace with your actual class names
 
-dataset_dir = "dataset" #The dataset directory should have images and labels directories with train and val subdirectories
+dataset_dir = "dataset" #The dataset directory should have images and labels(in YOLO format) directories with train and val subdirectories
 
 convert_yolo_to_coco(dataset_dir, class_names)
 
